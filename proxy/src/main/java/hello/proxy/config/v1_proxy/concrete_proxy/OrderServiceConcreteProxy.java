@@ -1,4 +1,4 @@
-package hello.proxy.config.v2_proxy.concrete_proxy;
+package hello.proxy.config.v1_proxy.concrete_proxy;
 
 import hello.proxy.app.v2.OrderServiceV2;
 import hello.proxy.trace.TraceStatus;
@@ -24,6 +24,7 @@ public class OrderServiceConcreteProxy extends OrderServiceV2 {
             logTrace.end(status);
         } catch (Exception e) {
             logTrace.exception(status, e);
-            throw e; }
+            throw e;
+        }
     }
 }
